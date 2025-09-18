@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoStock - Home</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="TelaHome.html"><img src="/Imagens/Cópia de Eco_Stock-removebg-preview.png" alt="Logo" /></a>
+    </div>
+    <input type="text" placeholder="Buscar produtos e muito mais..." />
+    <div class="nav-icons">
+      <a href="TelaHome.html">Home</a>
+      <a href="/P+íginas/Login - Cadastro/cadastro.html">Entrar</a>
+      <a href="#">Perfil</a>
+      <a href="carrinho.html">Carrinho 🛒</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Economize comprando sustentável</h1>
+      <p>Produtos seminovos com garantia e qualidade. Boas escolhas para você e para o planeta!</p>
+      <a href="#produtos" class="btn-hero">Ver Ofertas</a>
+    </div>
+  </section>
+
+  <!-- Categorias -->
+  <section class="categorias">
+    <div class="cat selected" data-cat="all">Todos</div>
+    <div class="cat" data-cat="celulares">📱 Celulares</div>
+    <div class="cat" data-cat="computadores">💻 Computadores</div>
+    <div class="cat" data-cat="livros">📚 Livros</div>
+    <div class="cat" data-cat="games">🎮 Games</div>
+    <div class="cat" data-cat="moda">👟 Moda</div>
+    <div class="cat" data-cat="acessorios">🎧 Acessórios</div>
+  </section>
+
+  <!-- Filtro -->
+  <section class="filtro">
+    <label for="filtroQualidade">Filtrar por estado:</label>
+    <select id="filtroQualidade">
+      <option value="all">Todos</option>
+      <option value="1">Ruim</option>
+      <option value="2">Médio</option>
+      <option value="3">Excelente</option>
+    </select>
+  </section>
+
+  <!-- Produtos -->
+  <section class="produtos" id="produtos">
+    <h2>Produtos em Oferta</h2>
+    <div class="cards-container">
+      <div class="card" data-cat="computadores" data-qualidade="3" data-preco="500">
+        <img src="/Imagens/computador.jpg" alt="Produto 1" />
+        <h3>pc Dell 120Gb + teclado funcional</h3>
+        <p class="preco">R$ 500,00</p>
+        <button class="btn">Adicionar</button>
+        <button class="btn2" onclick="window.location.href='../Página de Produto (especifico)/produtoespecifico.html'">Ver mais</button>
+
+      </div>
+
+      <div class="card" data-cat="livros" data-qualidade="2" data-preco="80">
+        <img src="/Imagens/Cópia de Gabinete Seminovo OEM.webp" alt="Produto 2" />
+        <h3>Produto 2</h3>
+        <p class="preco">R$ 80,00</p>
+        <button class="btn">Adicionar</button>
+        <button class="btn2" onclick="window.location.href='../Página de Produto (especifico)/produtoespecifico.html'">Ver mais</button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>© 2025 EcoStock - Todos os direitos reservados</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

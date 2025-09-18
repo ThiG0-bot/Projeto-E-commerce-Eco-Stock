@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo-container">
+            <!-- Atenção: Substitua por um caminho válido se estiver usando localmente -->
+            <img src="imgs/Eco Stock.png" alt="Logo da Empresa">
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+
+                <!-- Tela de Login -->
+                <div class="flip-card-front">
+                    <div class="form-card">
+                        <div class="form-header">
+                            <h2>Login</h2>
+                        </div>
+                        <form action="login.php" method="post">
+                            <div class="input-group">
+                                <label for="login-email">Email</label>
+                                <input type="email"  name="email" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="login-senha">Senha</label>
+                                <input type="password"  name="password" required>
+                            </div>
+
+                            <div class="options">
+                                <label class="remember-me">
+                                    <input type="checkbox"> Lembrar-me
+                                </label>
+                                <a href="#">Esqueci a senha</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Logar
+                                <link rel="stylesheet" href="/P+íginas/P+ígina Home/Site E-commerce/TelaHome.html">
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="goToRegister">Não tem conta? Registre-se</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Tela de Registro -->
+<div class="flip-card-back">
+    <div class="form-card">
+        <div class="form-header">
+            <h2>Registrar-se</h2>
+        </div>
+        <form action="register.php" method="post">
+            <div class="input-group">
+                <label for="register-username">Nome de usuário</label>
+                <input type="text" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="register-email">Email</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="register-senha">Senha</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="button" class="btn btn-secondary" id="goToLogin">Já tem conta? Faça o Login</button>
+        </form>
+    </div>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="style/script.js"></script>
+</body>
+</html>

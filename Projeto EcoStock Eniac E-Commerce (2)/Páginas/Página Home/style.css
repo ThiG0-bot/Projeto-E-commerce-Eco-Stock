@@ -1,0 +1,189 @@
+/* --- Configurações Gerais e Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #00004d;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+
+/* --- Container Principal --- */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+
+.logo-container {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    /* --- ALTERAÇÕES AQUI --- */
+    width: 100px;          /* NOVO: Define uma largura maior */
+    height: 100px;         /* NOVO: Define uma altura igual para formar um quadrado */
+    border-radius: 20px;   /* ALTERADO: De 50% para 20px para ter cantos arredondados */
+}
+
+
+.logo-container img {
+    width: 180px;           /* ALTERADO: De 60px para 80px para a imagem crescer */
+    height: auto;
+}
+
+
+/* --- ESTRUTURA DO FLIP CARD --- */
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 580px; /* Altura fixa para o card de cadastro caber */
+    perspective: 1000px; /* Efeito de profundidade 3D */
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+/* Classe que será adicionada/removida via JS para girar o card */
+.flip-card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Para navegadores Webkit */
+    backface-visibility: hidden; /* Esconde o lado que está "atrás" */
+}
+
+
+.flip-card-back {
+    transform: rotateY(180deg); /* O verso já começa "virado" */
+}
+
+
+/* --- ESTILO DO CONTEÚDO DO CARTÃO (reaproveitado) --- */
+.form-card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+.form-header {
+    margin-bottom: 2rem;
+}
+
+
+.form-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+
+.input-group input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+
+.options a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+}
+
+
+.btn {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+
+.btn-secondary {
+    background-color: transparent;
+    color: #555;
+}
